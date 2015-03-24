@@ -1,0 +1,23 @@
+<html><head>	<link rel="shortcut icon" type="image/ico" href="<?php echo base_url();?>/assets/img/favicon.ico" />	<link href="<?php echo base_url();?>/assets/css/style.css" rel="stylesheet" type="text/css" />	<link href="<?php echo base_url();?>/assets/css/main_css.php" rel="stylesheet" type="text/css" />	<link href="<?php echo base_url();?>/assets/css/jquery-ui.css" rel="stylesheet" type="text/css" />	<meta http-equiv="content-type" content="text/html" charset="UTF-8" />	<script src="<?php echo base_url();?>/assets/js/jquery.js"></script>	<script src="<?php echo base_url();?>/assets/js/jquery-ui.js"></script>	<script src="<?php echo base_url();?>/assets/js/jquery.calculoenergetico.js"></script></head><body><?php echo validation_errors();if(isset($tipo)){	echo '<div><span id="'.$tipo.'">';	echo '<img src="'.base_url().'/assets/img/'.$tipo.'.png" height="15px" width="15px"><strong>'.$mensaje.'</strong>';	echo '</span></div>';}?><a href="<?php echo site_url()?>/calculo/listado/<?php echo $id_paciente;?>">Regresar al Listado</a><form id="formulario" action="<?php echo site_url();?>/calculo/modificar/<?php echo $id_calculo_energetico;?>" method="post" enctype="multipart/form-data" style="width:100%;vertical-align:top;float:left">	<!--<div class="columnaizq">-->	<input type="hidden" name="paciente" value="<?php echo $id_paciente;?>" />	<input type="hidden" name="evaluacion" value="<?php echo $evaluacion->id;?>" />	<?php 
+		if($menor){
+			$this->load->view('calculo_energetico/extras/calculo_infante');
+		}else{
+			$this->load->view('calculo_energetico/extras/calculo_adulto');
+		}
+	?>
+	<div class="botones" align="center">
+		<input type="submit" value="Guardar" />
+		<input type="reset" value="Restaurar" />
+	</div>
+	<!--</div>-->
+	<!--<div class="columnader">
+		<?php $this->load->view('calculo_energetico/extras/ficha_ejercicio');?>
+	</div>-->
+</form>
+<script>
+$('#formulario').submit(function(){setTimeout(function(){
+		parent.listado_mini.location='<?php echo site_url()?>/calculo/listado_mini/<?php echo $id_paciente;?>';
+	},100);});
+</script>
+</body>
+</html>

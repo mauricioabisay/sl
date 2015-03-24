@@ -1,0 +1,9 @@
+<html>	<head>		<link href="<?php echo base_url();?>/assets/css/main_css.php" rel="stylesheet" type="text/css" />		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />		<script src="<?php echo base_url();?>/assets/js/jquery.js"></script>	</head>	<body><!--<a href="<?php echo site_url()?>/calculo/listado/<?php echo $id_paciente;?>">Regresar al Listado</a>-->
+<form id="ficha" method="post" enctype="multipart/form-data" style="width:100%">
+	<?php 
+		if($menor){
+			$this->load->view('plan_alimenticio/extras/calculo_infante_ficha');
+		}else{?>	<fieldset>		<legend>Consumo Energético = <?php echo $consumo_energetico->consumo_energetico;?> Calorías</legend>		<table class="listado">		<thead>			<tr>				<th>I.M.C.</th>				<th>Harris-Benedict</th>				<th>Shanblogue</th>				<th>Mifflin</th>				<th>Calorimetría Indirecta</th>			</tr>		</thead>		<tbody>			<tr>				<td><?php $imc_val = (float)$evaluacion->peso/($evaluacion->estatura*$evaluacion->estatura);echo round($imc_val,2);?></td>				<td><?php echo $harris['total'];?> Kcal.</td>				<td><?php echo $shanblogue['total'];?> Kcal.</td>				<td><?php echo $mifflin['total'];?> Kcal.</td>				<td><?php echo $consumo_energetico->calorimetro;?> Kcal.</td>			</tr>		</tbody>		</table>		<?php if(isset($patologias)&&$patologias){?>		<table class="listado">		<thead>			<tr>				<th>Patolog&iacute;a</th>				<th>Recomendaciones</th>			</tr>		</thead>		<tbody>			<?php foreach($patologias as $patologia){?>			<tr>				<td><?php echo $patologia->nombre;?></td>				<td align="justify">					<ul style="margin-left:1em">					<?php echo str_replace("-","</li><li>",$patologia->recomendacion);?>					</li>					</ul>				</td>			</tr>			<?php }?>		</tbody>		</table>		<?php }?>	</fieldset>	<?php }?>	<?php $this->load->view('plan_alimenticio/plan_buscar');?>	<?php $this->load->view('plan_alimenticio/plan_ficha');?>
+</form>
+</body>
+</html>

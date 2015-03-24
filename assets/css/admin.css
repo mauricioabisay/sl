@@ -1,0 +1,219 @@
+/**
+ * Definiciones globales a todos los elementos
+ */
+*{
+	font-family: "Arial Narrow", "MS Trebuchet", Arial, sans-serif;
+	margin: 0; 
+	padding:0;
+}
+
+/*
+ * Definicion del area de noticias
+ */
+#slider {
+	position: relative;
+	width: 30em;
+	height: 10em;
+	overflow: hidden;
+	margin: 0em;
+}
+
+#slider-in {
+	position: relative;
+	margin: 0em 5em;
+	list-style: none;
+	height: 10em;
+	overflow: hidden;
+	overflow-y: hidden;
+	background-color: #F25D06;
+}
+
+#slider-in li{
+	color: #fff;
+	width: 10em;
+	height: 10em;
+}
+
+#nav {
+	position: relative;
+	color: #808D95;
+	width: 10em;
+	display: inline;
+	margin: 0em 5em;
+	list-style: none;
+}
+
+#nav li {
+	text-align: center;
+	display: inline;
+	background-color: #F25D06;
+}
+
+#nav li a {
+color: #fff;
+font-size: 120%;
+text-decoration: none;
+color: #fff;
+background-color: #EC5F15;
+border: 2px solid #F25D06;
+padding: 5px;
+}
+
+#nav li a:hover, a:focus {
+color: #fff;
+background-color: #FCB047;
+}
+
+/***************************************
+ * Definicion de la barra de navegacion
+ ***************************************/
+.menu {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	margin: 0 0em 2em 0em;
+	padding: 1em;
+}
+
+.menu ul{
+	text-align: center;
+}
+
+.menu ul li {
+list-style-type: none;
+float: left;
+}
+
+.menu ul li a {
+color: #fff;
+font-size: 95%;
+text-decoration: none;
+color: #fff;
+background-color: #EC5F15;
+border: 1px solid #F25D06;
+padding: 5px;
+}
+
+.menu ul li a:hover, a:focus {
+color: #fff;
+background-color: #FCB047;
+}
+
+.menu ul li ul {
+display: none; 
+position: relative;
+float: none;
+padding: 0;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+.menu ul li:after ul {
+display: block;
+}
+
+.menu ul li ul li {
+display: block;
+float: none;
+color: #000;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+/***********************
+ * Definicion de banner
+ ***********************/
+.banner {
+	display: block;
+	margin: 1em;
+	padding: 0 2em 0 2em;
+	text-align: center;
+}
+/*********************************
+ * Definicion del area de trabajo
+ *********************************/
+.area_trabajo {
+	margin: 2em 1em 0 1em;
+}
+
+.area_trabajo * {
+	margin: 1em auto 0;
+	position: static;
+}
+
+.area_trabajo a:visited {
+	color: #F25D06;
+}
+
+.area_trabajo a:hover, a:focus {
+	color: red;
+}
+
+.area_trabajo h1, h2, h3, h4, h5, h6{
+	color: #EC5F15;
+}
+
+.area_trabajo p {
+	text-indent: 1em;
+	color: #000;
+}
+
+.area_trabajo b {
+	color: #000;
+}
+
+.area_trabajo strong{
+	color: #000;
+}
+
+.area_trabajo b {
+	
+}
+
+.area_trabajo i {
+	
+}
+
+.area_trabajo address {
+	
+}
+
+.area_trabajo ol {
+	margin: 1em;
+	position:relative;
+}
+.area_trabajo ul {
+	margin: 1em;
+	position:relative;
+}
+
+.area_trabajo table.listado{
+	width: 100%;
+}
+
+.area_trabajo form.formulario{
+	width: 100%;
+}
+
+.area_trabajo form label{
+	position: relative;
+	display: inline;
+}
+
+.area_trabajo form input {
+	display: inline;
+	width: auto;
+}
+
+.area_trabajo form textarea{
+	display: block;
+	width: 15em;
+}
+
+.area_trabajo form select {
+}
+
+.area_trabajo form input.boton{
+	display: inline;
+	width: 5em;
+}

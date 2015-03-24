@@ -1,0 +1,109 @@
+.texto_plano fieldset{
+	margin: auto;
+	padding: 1em;
+	text-align: justify;
+	display: block;
+	border: 2px solid #045788;
+}
+
+.texto_plano legend{
+	font-weight: bold;
+}
+
+.texto_plano fieldset fieldset{
+	margin: 0.5em;
+	padding: 0.5em;
+	text-align: justify;
+	display: block;
+	border: 1px solid #045788;
+}
+
+.texto_plano .foto{
+	margin: auto;
+	padding: 0.5em;
+	text-align: justify;
+	float:right;
+	vertical-align:top;
+	display: inline;
+}
+
+.texto_plano .fotoizq{
+	margin-right: 0.5em;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0em;
+	text-align: justify;
+	float:left;
+	vertical-align:top;
+	display: inline;
+}
+
+.texto_plano label{
+	font-size: 90%;
+	color: #227ab7;
+	display: block;
+}
+
+.texto_plano span{
+	margin: 0.2em;
+	font-size: 100%;
+	display: inline;
+}
+
+.texto_plano .texto{
+	font-size: 100%;
+	display: block;
+}
+
+.texto_plano .lineal{
+	text-align: justify;
+	display: block;
+}
+
+.texto_plano .lineal label{
+	font-size: 90%;
+	color: #227ab7;
+	display: inline;
+}
+
+.texto_plano .lineal span{
+	font-size: 100%;
+	display: inline;
+}
+
+.texto_plano .lineal_oculto{
+	text-align: justify;
+	display: none;
+}
+
+.texto_plano .lineal_oculto label{
+	font-size: 90%;
+	color: #227ab7;
+	display: inline;
+}
+
+.texto_plano .lineal_oculto span{
+	font-size: 100%;
+	display: inline;
+}
+
+.texto_plano .columna{
+	margin: 1em;
+	vertical-align:top;
+	text-align: justify;
+	display: inline;
+}
+
+.texto_plano .columnaizq{
+	float: left;
+	vertical-align:top;
+	text-align: justify;
+	display: inline;
+}
+
+.texto_plano .columnader{
+	float:right;
+	vertical-align:top;
+	text-align: justify;
+	display: inline;
+}

@@ -1,0 +1,1 @@
+<?phpif($usuario->tipo == 1){	$this->load->view('usuario/extras/horario_modificar_general');	}?><?php $this->load->view('usuario/extras/horario_modificar_doctor');?>
